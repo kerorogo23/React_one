@@ -77,6 +77,7 @@ function ProductList() {
               <h3>{product.productName}</h3>
               <p>類別：{product.category}</p>
               <p>價格：{product.price}</p>
+              <p>庫存：{product.stock}</p>git status
               <button onClick={() => handleShowProductDetails(product.productId)}>
                 商品詳細
               </button>
