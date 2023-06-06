@@ -58,7 +58,7 @@ function ProductList() {
   };
 
   return (
-    <div>
+    <div className="background">
       <h4 style={{ textAlign: 'center' }}>
         <Link to="/home">商品管理</Link>
       </h4>
@@ -78,7 +78,7 @@ function ProductList() {
       <ul className="product-list">
         {products.map((product) => (
           <li key={product.productId} className="product-item">
-            <div>
+            <div className="background-form">
               <img src={product.imageUrl} alt={product.productName} />
               <h3>{product.productName}</h3>
               <p>商品ID：{product.productId}</p>

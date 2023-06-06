@@ -1,5 +1,13 @@
 /* styles.css */
 
+.background {
+  background-color: #a6d31f;
+}
+
+.background-form {
+  background-color: #fff;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
