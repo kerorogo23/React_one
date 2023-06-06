@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import './UpdateProduct.css';
 import { Link } from 'react-router-dom';
 
 function UpdateProduct() {
@@ -68,12 +69,12 @@ function UpdateProduct() {
   };
 
   return (
-    <div>
+    <div className="a">
       <h4 style={{ textAlign: 'center' }}><Link to="/home">商品管理</Link></h4>
       <h1>修改商品</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          商品ID：
+          商品&nbsp;&nbsp;I&nbsp;D：
           <input type="text" value={productId} onChange={(e) => setProductId(e.target.value)} />
         </label>
         {isFetching ? (
@@ -85,7 +86,7 @@ function UpdateProduct() {
               <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)} />
             </label>
             <label>
-              分類：
+              分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;類：
               <input type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
             </label>
             <label>
@@ -93,7 +94,7 @@ function UpdateProduct() {
               <input type="text" value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} />
             </label>
             <label>
-              價格：
+              價&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：
               <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
             </label>
             <label>
@@ -101,8 +102,8 @@ function UpdateProduct() {
               <input type="text" value={stock} onChange={(e) => setStock(e.target.value)} />
             </label>
             <label>
-              描述：
-              <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+              描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：
+              <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
             </label>
             <button type="submit" disabled={isSubmitting}>
               {isSubmitting ? '提交中...' : '確認修改'}
