@@ -54,12 +54,14 @@ function CreateProduct() {
         </div>
         <div>
           <label>分類:</label>
-          <input
-            type="text"
-            placeholder="必填"
+          <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-          />
+          >
+            <option value="">選擇分類</option>
+            <option value="FOOD">FOOD</option>
+            <option value="CAR">CAR</option>
+          </select>
         </div>
         <div>
           <label>圖片網址:</label>
