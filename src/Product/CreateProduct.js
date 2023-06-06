@@ -10,6 +10,7 @@ function CreateProduct() {
   const [price, setPrice] = useState(0);
   const [stock, setStock] = useState(0);
   const [description, setDescription] = useState('');
+  const [creationStatus, setCreationStatus] = useState(null); // 追蹤創建的結果
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,15 +34,21 @@ function CreateProduct() {
       setPrice(0);
       setStock(0);
       setDescription('');
+      setCreationStatus('success'); // 更新創建結果狀態為成功
     } catch (error) {
       console.error('Error creating product:', error);
+      setCreationStatus('failure'); // 更新創建結果狀態為失敗
     }
   };
 
   return (
     <div className="container">
-      <h4 style={{ textAlign: 'center' }}><Link to="/home">商品管理</Link></h4>
+      <h4 style={{ textAlign: 'center' }}>
+        <Link to="/home">商品管理</Link>
+      </h4>
       <h1>創建商品</h1>
+      {creationStatus === 'success' && <p style={{ color: 'green', fontWeight: 'bold', fontSize: '20px' }}>創建成功！！</p>}
+      {creationStatus === 'failure' && <p style={{ color: 'red', fontWeight: 'bold', fontSize: '20px' }}>創建失敗！</p>}
       <form onSubmit={handleSubmit}>
         <div>
           <label>商品名稱:</label>
