@@ -47,7 +47,7 @@ function CreateProduct() {
         <Link to="/home">商品管理</Link>
       </h4>
       <h1>創建商品</h1>
-      {creationStatus === 'success' && <p style={{ color: 'green', fontWeight: 'bold', fontSize: '20px' }}>創建成功！！</p>}
+      {creationStatus === 'success' && <p style={{ color: 'green', fontWeight: 'bold', fontSize: '20px' }}>創建成功！</p>}
       {creationStatus === 'failure' && <p style={{ color: 'red', fontWeight: 'bold', fontSize: '20px' }}>創建失敗！</p>}
       <form onSubmit={handleSubmit}>
         <div>
