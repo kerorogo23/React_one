@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './DeleteProduct.css'
 import { Link } from 'react-router-dom';
 
 function DeleteProduct() {
@@ -46,7 +47,7 @@ function DeleteProduct() {
   };
 
   return (
-    <div>
+    <div className="background-delete">
       <h4 style={{ textAlign: 'center' }}><Link to="/home">商品管理</Link></h4>
       <h2>刪除商品</h2>
       <label>
@@ -56,9 +57,9 @@ function DeleteProduct() {
       <button onClick={handleDelete} disabled={isDeleting}>
         {isDeleting ? '刪除中...' : '確認刪除'}
       </button>
-      {notFound && <p style={{ color: 'red' }}>沒有該ID的商品</p>}
+      {notFound && <p style={{ color: 'blue', fontWeight: 'bold' }}>沒有該ID的商品。</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>刪除成功！</p>}
+      {success && <p style={{ color: 'green', fontWeight: 'bold' }}>刪除成功！</p>}
     </div>
   );
 }
