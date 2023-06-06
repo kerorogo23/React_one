@@ -30,7 +30,7 @@ function UpdateProduct() {
       setDescription(product.description);
     } catch (error) {
       console.error('Error fetching product:', error);
-      setError('商品查詢失敗，請重試。');
+      setError(<p style={{ color: 'red', fontWeight: 'bold', fontSize: '20px' }}>商品查詢失敗，請重試。</p>);
     } finally {
       setIsFetching(false);
     }
