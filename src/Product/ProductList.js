@@ -49,13 +49,19 @@ function ProductList() {
     setCurrentPage(page);
   };
 
-  const handleShowProductDetails = (productId) => {
-    setSelectedProductId(productId);
+  const handleToggleProductDetails = (productId) => {
+    if (selectedProductId === productId) {
+      setSelectedProductId(null);
+    } else {
+      setSelectedProductId(productId);
+    }
   };
 
   return (
     <div>
-      <h4 style={{ textAlign: 'center' }}><Link to="/home">商品管理</Link></h4>
+      <h4 style={{ textAlign: 'center' }}>
+        <Link to="/home">商品管理</Link>
+      </h4>
       <h2 style={{ textAlign: 'center' }}>商品列表</h2>
       <div>
         <label htmlFor="category">類別：</label>
@@ -79,8 +85,8 @@ function ProductList() {
               <p>類別：{product.category}</p>
               <p>價格：{product.price}</p>
               <p>庫存：{product.stock}</p>
-              <button onClick={() => handleShowProductDetails(product.productId)}>
-                商品詳細
+              <button onClick={() => handleToggleProductDetails(product.productId)}>
+                {selectedProductId === product.productId ? '關閉詳細' : '展開詳細'}
               </button>
               {selectedProductId === product.productId && (
                 <div className="product-details">
