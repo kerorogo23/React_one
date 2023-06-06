@@ -81,7 +81,7 @@ function ProductList() {
             <div className="background-form">
               <img src={product.imageUrl} alt={product.productName} />
               <h3>{product.productName}</h3>
-              <p style={{ marginLeft: '30px', color: 'red' }}>商品ID：{product.productId}</p>
+              <p style={{ marginLeft: '30px', color: 'red', fontWeight: 'bold' }}>商品ID：{product.productId}</p>
               <p style={{ marginLeft: '30px' }}>類&nbsp;&nbsp;&nbsp;別：{product.category}</p>
               <p style={{ marginLeft: '30px' }}>價&nbsp;&nbsp;&nbsp;格：{product.price}</p>
               <p style={{ marginLeft: '30px', color: 'blue' }}>庫&nbsp;&nbsp;&nbsp;存：{product.stock}</p>
@@ -90,7 +90,7 @@ function ProductList() {
               </button>
               {selectedProductId === product.productId && (
                 <div className="product-details">
-                  <p style={{ marginLeft: '10px', color: 'red' }}>商品ID：{product.productId}</p>
+                  <p style={{ marginLeft: '10px', color: 'red', fontWeight: 'bold' }}>商品ID：{product.productId}</p>
                   <p style={{ marginLeft: '10px' }}>商品名稱：{product.productName}</p>
                   <p style={{ marginLeft: '10px' }}>類&nbsp;&nbsp;&nbsp;別：{product.category}</p>
                   <p style={{ marginLeft: '10px' }}>圖片_URL：{product.imageUrl}</p>
