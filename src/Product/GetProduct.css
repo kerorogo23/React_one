@@ -1,14 +1,15 @@
 .product-container {
-    border: 1px solid #ccc;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .product-details {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  
-  /* Add more styles as needed */
-  
+  background-color: rgb(151, 134, 236);
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product-details {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Add more styles as needed */

@@ -48,7 +48,7 @@ function GetProduct() {
         <p style={{ color: 'red', fontWeight: 'bold', fontSize: '20px' }}>沒有該ID的商品</p>
       ) : product ? (
         <div className="product-details">
-          <p>產品ID: {product.productId}</p>
+          <p style={{ color: 'red', fontWeight: 'bold' }}>產品ID: {product.productId}</p>
           <p>產品名稱: {product.productName}</p>
           <p>分類: {product.category}</p>
           <p>
