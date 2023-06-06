@@ -37,7 +37,7 @@ function GetProduct() {
       <h1>查詢產品資訊</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          產品ID:
+          產品ID：&nbsp;
           <input type="text" value={productId} onChange={(e) => setProductId(e.target.value)} />
         </label>
         <button type="submit">查詢</button>
@@ -48,17 +48,17 @@ function GetProduct() {
         <p style={{ color: 'red', fontWeight: 'bold', fontSize: '20px' }}>沒有該ID的商品</p>
       ) : product ? (
         <div className="product-details">
-          <p style={{ color: 'red', fontWeight: 'bold' }}>產品ID: {product.productId}</p>
-          <p>產品名稱: {product.productName}</p>
-          <p>分類: {product.category}</p>
+          <p style={{ color: 'red', fontWeight: 'bold' }}>產品ID：{product.productId}</p>
+          <p>產品名稱：{product.productName}</p>
+          <p>分類：{product.category}</p>
           <p>
             <img src={product.imageUrl} alt="" style={{ width: '200px', height: 'auto' }} />
           </p>
-          <p>價格: {product.price}</p>
-          <p>庫存數量: {product.stock}</p>
-          <p>描述: {product.description}</p>
-          <p>創建日期: {product.createdDate}</p>
-          <p>最後修改日期: {product.lastModifiedDate}</p>
+          <p>價格：{product.price}</p>
+          <p style={{ color: 'blue' }}>庫存數量：{product.stock}</p>
+          <p>描述：{product.description}</p>
+          <p>創建日期：{product.createdDate}</p>
+          <p>最後修改日期：{product.lastModifiedDate}</p>
         </div>
       ) : (
         <p>請輸入產品ID以查詢</p>
