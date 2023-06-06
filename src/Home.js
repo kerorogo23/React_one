@@ -15,7 +15,7 @@ function Home() {
 
     return (
         <div className="app-container">
-            <h1 className="app-heading">101書城後台</h1>
+            <h1 className="app-heading">101書城 商品管理</h1>
             <nav className="app-nav">
                 <ul className="app-nav-list">
 
