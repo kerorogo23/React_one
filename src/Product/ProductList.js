@@ -81,24 +81,24 @@ function ProductList() {
             <div className="background-form">
               <img src={product.imageUrl} alt={product.productName} />
               <h3>{product.productName}</h3>
-              <p>商品ID：{product.productId}</p>
-              <p>類別：{product.category}</p>
-              <p>價格：{product.price}</p>
-              <p>庫存：{product.stock}</p>
+              <p style={{ marginLeft: '30px', color: 'red' }}>商品ID：{product.productId}</p>
+              <p style={{ marginLeft: '30px' }}>類&nbsp;&nbsp;&nbsp;別：{product.category}</p>
+              <p style={{ marginLeft: '30px' }}>價&nbsp;&nbsp;&nbsp;格：{product.price}</p>
+              <p style={{ marginLeft: '30px', color: 'blue' }}>庫&nbsp;&nbsp;&nbsp;存：{product.stock}</p>
               <button onClick={() => handleToggleProductDetails(product.productId)}>
                 {selectedProductId === product.productId ? '關閉詳細' : '展開詳細'}
               </button>
               {selectedProductId === product.productId && (
                 <div className="product-details">
-                  <p>商品ID：{product.productId}</p>
-                  <p>商品名稱：{product.productName}</p>
-                  <p>類別：{product.category}</p>
-                  <p>圖片URL：{product.imageUrl}</p>
-                  <p>價格：{product.price}</p>
-                  <p>庫存：{product.stock}</p>
-                  <p>描述：{product.description}</p>
-                  <p>創建日期：{product.createdDate}</p>
-                  <p>最後修改日期：{product.lastModifiedDate}</p>
+                  <p style={{ marginLeft: '10px', color: 'red' }}>商品ID：{product.productId}</p>
+                  <p style={{ marginLeft: '10px' }}>商品名稱：{product.productName}</p>
+                  <p style={{ marginLeft: '10px' }}>類&nbsp;&nbsp;&nbsp;別：{product.category}</p>
+                  <p style={{ marginLeft: '10px' }}>圖片_URL：{product.imageUrl}</p>
+                  <p style={{ marginLeft: '10px' }}>價&nbsp;&nbsp;&nbsp;格：{product.price}</p>
+                  <p style={{ marginLeft: '10px', color: 'blue' }}>庫&nbsp;&nbsp;&nbsp;存：{product.stock}</p>
+                  <p style={{ marginLeft: '10px' }}>描&nbsp;&nbsp;&nbsp;述：{product.description}</p>
+                  <p style={{ marginLeft: '10px' }}>創建日期：{product.createdDate}</p>
+                  <p style={{ marginLeft: '10px' }}>最後_修改日期：{product.lastModifiedDate}</p>
                 </div>
               )}
             </div>
