@@ -75,9 +75,10 @@ function ProductList() {
             <div>
               <img src={product.imageUrl} alt={product.productName} />
               <h3>{product.productName}</h3>
+              <p>商品ID：{product.productId}</p>
               <p>類別：{product.category}</p>
               <p>價格：{product.price}</p>
-              <p>庫存：{product.stock}</p>git status
+              <p>庫存：{product.stock}</p>
               <button onClick={() => handleShowProductDetails(product.productId)}>
                 商品詳細
               </button>

@@ -8,8 +8,8 @@ function App() {
       <nav className="app-nav">
         <ul className="app-nav-list">
 
-          <li className="app-nav-item">
-            <Link to="/" className="app-nav-link">後台畫面</Link>
+          <li >
+            <Link to="/"></Link>
           </li>
 
           <li className="app-nav-item">
